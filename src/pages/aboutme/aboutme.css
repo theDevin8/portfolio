@@ -1,0 +1,149 @@
+#aboutme{
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+    height: 2em;
+}
+.aboutme-link{
+    text-decoration: none;
+}
+
+/*about me card style */
+.aboutme-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35em;
+    overflow: hidden;
+  }
+  
+  .aboutme-cards {
+    display: flex;
+    flex-wrap: nowrap;
+    animation: slide 35s linear infinite;
+  }
+  
+  .aboutme-card {
+    height: 30em;
+    width: 21em;
+    background: #858585;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+    margin: 0 2em;
+    scroll-snap-align: center;
+    animation-play-state: running;
+  }
+  
+  @keyframes slide {
+    0% {
+        transform: translateX(-50%);
+      }
+    50% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    
+  }
+  .aboutme-card:hover {
+    transform: scale(1.05);
+    animation-play-state: paused;
+  }
+  
+  .aboutme-cards-container:hover .aboutme-cards {
+    animation-play-state: paused;
+  }
+.aboutme-title{
+    margin: 0;
+    color: white;
+    font-weight: 200;
+    font-size: 25px;
+}
+.aboutme-description {
+    color: white;
+    font-weight: 200;
+    padding: 0 1em 0 1em;
+}
+
+/*bluelock gif style */
+.aboutme-card:hover .bluelock-gif {
+    filter: sepia(70%) saturate(150%) brightness(80%);
+    cursor: pointer;
+}
+.bluelock-gif{
+    position: relative;
+    height: 11em;
+    width: 20em;
+    border-radius: 3em;
+    margin: .8em auto 1em auto;
+}
+
+/*coding gif style */
+.coding-gif{
+    position: relative;
+    height: 11em;
+    width: 20em;
+    border-radius: 3em;
+    margin: 2em auto 1em auto;
+}
+.aboutme-card:hover .coding-gif{
+    filter: sepia(70%) saturate(150%) brightness(80%);
+    cursor: pointer;
+}
+.github{
+    margin-top: 0;
+    margin-bottom: 2em;
+    color: white;
+}
+
+/*gaming gif style */
+.gaming-gif{
+    position: relative;
+    height: 11em;
+    width: 20em;
+    border-radius: 3em;
+    margin: 0 auto 1em auto;
+}
+.aboutme-card:hover .gaming-gif{
+    filter: sepia(70%) saturate(150%) brightness(80%);
+}
+
+/* anime gif style */
+.anime-gif{
+    position: relative;
+    height: 11em;
+    width: 20em;
+    border-radius: 3em;
+    margin: 0 auto 1em auto;
+}
+.aboutme-card:hover .anime-gif{
+    filter: sepia(70%) saturate(150%) brightness(80%);
+}
+
+/*tutor gif style */
+.tutor-gif{
+    position: relative;
+    height: 11em;
+    width: 20em;
+    border-radius: 3em;
+    margin: 1.6em auto 1em auto;
+}
+.aboutme-card:hover .tutor-gif{
+    filter: sepia(70%) saturate(150%) brightness(80%);
+}
+.aboutme-description-tutor{
+    color: white;
+    font-weight: 200;
+    padding: 0 1em 0 1em;
+    margin-bottom: 0;
+}
+.tutor{
+    color: white;
+    font-weight: 200;
+    margin-top: .4em;
+}

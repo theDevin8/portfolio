@@ -1,0 +1,122 @@
+
+/*navbar style */
+.navbar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    height: 12em;
+    color: black;
+    
+}
+.navbar-container {
+    margin-top: 3em;
+}
+.nav-tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    margin-right: 1rem;
+}
+.nav-item {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: black;
+}
+.aboutme-nav{
+    text-decoration: none;
+}
+/*greeting style */
+.greeting-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.greeting {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: -1;
+    font-weight: bold;
+    font-size: 48px;
+}
+.greeting.active {
+    opacity: 1;
+    z-index: 1;
+}
+.greeting.active.enter {
+    animation-name: enter;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+.greeting.active.exit {
+    animation-name: exit;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+}
+@keyframes enter {
+    from {
+        transform: translate(-50%, 100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+@keyframes exit {
+    from {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+
+    to {
+        transform: translate(-50%, -100%);
+        opacity: 0;
+    }
+}
+
+/*toogle dark mode style */
+.toogle-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.darkmode-img{
+    height: 3em;
+    width: 3em;
+}
+
+/*icon styles*/
+.links-to-me {
+    position: absolute;
+    top: calc(30% + 5em);
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.icons-to-me {
+    width: 3em;
+    height: 3em;
+    margin: 0 1em;
+    transition: transform 0.2s ease-in-out;
+}
+.icons-to-me:hover {
+    transform: translateY(-10px) scale(1.2);
+}

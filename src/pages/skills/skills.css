@@ -1,0 +1,43 @@
+#skills{
+    font-weight: bold;
+    font-size: 48px;
+    text-align: center;
+    height: 2em;
+    margin-top: 1.5em;
+}
+.skills-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #858585;
+    height: 40em;
+    width: 60em;
+    border-radius: 3em;
+    margin: 0 auto;
+  }
+  .skills-title {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+  }
+  .list-skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+  
+  .list-skills img {
+    width: 5em;
+    margin-bottom: 0.5em;
+  }
+  
+  .programming-lang {
+    font-size: 1.2em;
+    color: white;
+    text-align: center;
+  }
