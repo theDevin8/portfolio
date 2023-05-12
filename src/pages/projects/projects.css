@@ -3,6 +3,7 @@
     font-size: 48px;
     text-align: center;
     height: 2em;
+    color: #990000;
 }
 .project-link{
     text-decoration: none;
@@ -11,7 +12,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    background: #858585;
+    background: #ba8686;
     height: 20em;
     width: 55em;
     border-radius: 3em;
@@ -51,8 +52,7 @@
   .projectTp-icon{
     width: 3em;
     height: 3em;
-    margin-right: 1.5em;
-    margin-left: .4em
+    margin-right: .8em;
   }
   .projectP-icon {
     width: 3em;
@@ -86,4 +86,60 @@
   
 .project-card:hover .project-gif{
     filter: sepia(70%) saturate(150%) brightness(80%);
+}
+
+.dark-mode .project-card{
+  background-color: #d18d57;
+}
+
+.dark-mode #projects{
+  color: #FF8B13;
+}
+
+@media (max-width: 896px){
+  #projects{
+    font-size: 24px;
+  }
+  .project-card{
+    width: 23em;
+    height: 12em;
+  }
+  .project-gif{
+    height: 8em;
+    width: 11em;
+    margin: 0;
+  }
+  .project-name{
+    font-size: 12px;
+    margin:0;
+  }
+  .projectTp-icon{
+    height: 1.5em;
+    width: 1.5em;
+  }
+  .left-project-card{
+    display: flex;
+    align-items: flex-start;
+    padding: 0;
+    margin-left: .5em;
+  }
+  .project-description{
+    font-size: 10px;
+    width: 13em;
+    padding: .2em;
+    color: white;
+  }
+  .right-project-card{
+    margin-top:1em;
+    margin-left: 0;
+  }
+  .list-project-tools{
+    margin-left: .8em;
+  }
+  .projectP-icon{
+    height: 1.5em;
+    width: 1.5em;
+    margin-left: .4em;
+  }
+
 }

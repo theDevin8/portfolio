@@ -3,6 +3,7 @@
     font-size: 48px;
     text-align: center;
     height: 2em;
+    color: #990000;
 }
 .aboutme-link{
     text-decoration: none;
@@ -26,14 +27,14 @@
   .aboutme-card {
     height: 30em;
     width: 21em;
-    background: #858585;
+    background: #ba8686;
     border-radius: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: all 0.5s ease-in-out;
-    margin: 0 2em;
+    margin: 1em 2em;
     scroll-snap-align: center;
     animation-play-state: running;
   }
@@ -49,6 +50,11 @@
         transform: translateX(-50%);
       }
     
+  }
+  @media screen and (min-width: 2048px) {
+    .aboutme-cards {
+      animation-duration: 60s;
+    }
   }
   .aboutme-card:hover {
     transform: scale(1.05);
@@ -146,4 +152,168 @@
     color: white;
     font-weight: 200;
     margin-top: .4em;
+}
+
+/*flexed */
+.aboutme-cards-container-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.aboutme-cards-flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1em 2em;
+}
+
+/*button for layouts */
+.button {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .5rem;
+  background-color: #ba8686;
+  color: white;
+  padding: 1.15rem 1.5rem;
+  border-radius: 0;
+  transition: .3s;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.25);
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-bottom: 3em;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.button-wrapper button[data-selected=true] {
+  background-color: #663333;
+  color: white;
+}
+.left-button {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.right-button {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.left-button:hover {
+  background-color: #663333;
+  color: white;
+}
+
+.right-button:hover {
+  background-color: #663333;
+  color: white;
+}
+
+/*dark mode styles */
+
+.dark-mode .button{
+  background-color: #d18d57;
+}
+.dark-mode .button-wrapper button[data-selected=true] {
+  background-color: #9d5113;
+  color: white;
+}
+.dark-mode .aboutme-card{
+  background-color: #d18d57;
+}
+
+.dark-mode #aboutme{
+  color: #FF8B13;
+}
+@media (max-width: 480px){
+  #aboutme{
+    font-size: 24px;
+  }
+  .aboutme-cards-container{
+    height: 55em;
+  }
+  .aboutme-cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    animation: none;
+  }
+  .aboutme-card{
+    height: 18em;
+    width: 12em;
+    margin: 0 auto;
+    margin-left: .4em;
+    margin-right: .4em;
+    margin-bottom: .4em;
+    transform: none;
+  }
+  .aboutme-title{
+    font-size: 1em;
+    margin-bottom: .1em;
+  }
+  .coding-gif{
+    height: 5em;
+    width: 11em;
+    margin: 0 auto;
+    padding-top: .3em;
+    padding-bottom: .3em;
+  }
+  .github{
+    font-size: .7em;
+    margin-top: .2em;
+  }
+  .aboutme-description{
+    font-size: .7em;
+    margin: .1em;
+  }
+  .tutor-gif{
+    height: 5em;
+    width: 11em;
+    margin: 0 auto;
+    padding-bottom: .8em;
+    border-radius: 3em;
+  }
+  .tutor{
+    font-size: .7em;
+    margin: 0;
+  }
+  .bluelock-gif{
+    height: 5em;
+    width: 11em;
+    margin: 0 auto;
+  }
+  .gaming-gif{
+    height: 5em;
+    width: 11em;
+    margin: 0 auto; 
+  }
+
+  .anime-gif{
+    height: 5em;
+    width: 11em;
+    margin: 0 auto;
+  }
+
+  .aboutme-card:hover {
+    transform: none;
+  }
+  .aboutme-card:hover .bluelock-gif,
+    .aboutme-card:hover .coding-gif,
+    .aboutme-card:hover .gaming-gif,
+    .aboutme-card:hover .anime-gif,
+    .aboutme-card:hover .tutor-gif {
+        filter: none;
+        cursor: default;
+    }
+    
+    .aboutme-cards-container:hover .aboutme-cards {
+        animation-play-state: paused;
+    }
 }

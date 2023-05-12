@@ -5,6 +5,8 @@ import Webpage from "../pages/Webpage/webpage";
 import Aboutme from "../pages/aboutme/aboutme";
 import Projects from "../pages/projects/projects";
 import Skills from "../pages/skills/skills";
+import Contact from "../pages/contact/contact";
+
 
 const Layout = () => {
     return (
@@ -14,6 +16,7 @@ const Layout = () => {
         <Aboutme />
         <Projects />
         <Skills />
+        <Contact />
         <Outlet />
       </>
     );
