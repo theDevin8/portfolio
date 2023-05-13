@@ -88,7 +88,7 @@ const Projects = () => {
                             </div>
 
                             <div className="right-project-card">
-                                <h3 className="project-name">{'Habitify (coming soon)'}</h3>
+                                <h3 className="project-name">{'O(n)Track (coming soon)'}</h3>
                                 <p className="project-description">
                                     Habitify will be a mobile application inspired by the book Atomic Habits by James Clear, designed to help you achieve your goals by keeping track of your daily habits.
                                     With its user-friendly interface, customizable reminders, and visual progress tracking, it's an effective tool for building and maintaining better habits. 
@@ -180,7 +180,7 @@ const Projects = () => {
                             </div>
 
                             <div className="right-project-card">
-                                <h3 className="project-name">{'Habitify (coming soon)'}</h3>
+                                <h3 className="project-name">{'O(n)Track (coming soon)'}</h3>
                                 <p className="project-description">
                                     Habitify will be a mobile application inspired by the book Atomic Habits by James Clear, that helps you keep track of your daily habits and achieve your goals, 
                                     with customizable reminders and visual progress tracking.
