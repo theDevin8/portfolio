@@ -1,6 +1,6 @@
 
-import React, { useEffect } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import Layout from './componets/layout';
 
