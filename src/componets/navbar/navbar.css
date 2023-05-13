@@ -1,7 +1,7 @@
 /*navbar style */
 .navbar-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     height: 80px;
     position: fluid;
@@ -79,7 +79,7 @@
   .navbar-container {
     display: flex;
     justify-content: flex-start;
-    margin-left: 0;
+    margin:0;
   }
 
   .navbar-menu{
@@ -123,7 +123,7 @@
   /*nav-bar elements on click */
   .navbar-mobile-menu{
     position: absolute;
-    top: 10%;
+    top: 20%;
     flex-direction: column;
     z-index: 1;
     transition: height 0.3s ease-in-out;
