@@ -38,6 +38,10 @@
     align-items: center;
     justify-content: center;
 }
+.credits{
+  text-align: center;
+  font-size: 10px;
+}
 
 .dark-mode #contact{
   color: #FF8B13;
@@ -67,5 +71,11 @@
   }
   .description-p{
     font-size: 10px;
+  }
+  .credits{
+    font-size: 4px;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
   }
 }

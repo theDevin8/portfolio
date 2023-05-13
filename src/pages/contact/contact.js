@@ -97,6 +97,8 @@ const Contact = () =>{
                         </div>
                     </div>
                     <p className="description-p">© Created by Devin Stockton</p>
+                    <p className="credits">{'This work is based on "Parasite eyeball - blender file" (https://sketchfab.com/3d-models/parasite-eyeball-blender-file-a8ac67648d6a4e25a90f757b90a89f01) by ewa_podermanska (https://sketchfab.com/ewapodermanska) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)'}</p>
+                    <p className="credits">{'This work is based on "Kraken eyeball - blender file" (https://sketchfab.com/3d-models/kraken-eyeball-blender-file-9af20edc176c460391d1948356c339b7) by ewa_podermanska (https://sketchfab.com/ewapodermanska) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)'}</p>
                 </div>
             )}
             {isMobile && (
@@ -132,6 +134,8 @@ const Contact = () =>{
                         </div>
                     </div>
                     <p className="description-p">© Created by Devin Stockton</p>
+                    <p className="credits">{'This work is based on "Parasite eyeball - blender file" (https://sketchfab.com/3d-models/parasite-eyeball-blender-file-a8ac67648d6a4e25a90f757b90a89f01) by ewa_podermanska (https://sketchfab.com/ewapodermanska) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)'}</p>
+                    <p className="credits">{'This work is based on "Kraken eyeball - blender file" (https://sketchfab.com/3d-models/kraken-eyeball-blender-file-9af20edc176c460391d1948356c339b7) by ewa_podermanska (https://sketchfab.com/ewapodermanska) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)'}</p>
                 </div>
             )}
         </div>
