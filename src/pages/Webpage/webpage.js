@@ -9,11 +9,13 @@ import github from '../../img/github-icon.png';
 import mail from '../../img/mail-icon.png';
 import discord from '../../img/discord-icon.png';
 import resume from '../../img/resume-icon.png';
-
+import myresume from '../Webpage/devinResume.pdf';
 import './webpage.css'
 
 const Webpage = () => {
     const [welcomeMessage, setWelcomeMessage] = useState("");
+    const [intervalId, setIntervalId] = useState(null);
+    
     useEffect(() => {
         const message = "Exploring the world as I see it...";
         const typeMessage = () => {
@@ -25,19 +27,32 @@ const Webpage = () => {
                     clearInterval(intervalId);
                 }
             }, 50);
+            return intervalId;
         };
-
-        typeMessage();
-
+    
+        const intervalId = typeMessage();
+    
         const resetMessage = () => {
             setWelcomeMessage("");
-            typeMessage();
+            clearInterval(intervalId);
+            const newIntervalId = typeMessage();
+            setIntervalId(newIntervalId);
         };
-        const intervalId = setInterval(resetMessage, 6000);
+    
+        const handleVisibilityChange = () => {
+            if (document.hidden) {
+                clearInterval(intervalId);
+            } else {
+                resetMessage();
+            }
+        };
+    
+        document.addEventListener("visibilitychange", handleVisibilityChange);
+    
         return () => {
             clearInterval(intervalId);
+            document.removeEventListener("visibilitychange", handleVisibilityChange);
         };
-
     }, []);
 
     const [isToggled, setToggled] = useState(false);
@@ -59,7 +74,7 @@ const Webpage = () => {
     useEffect(() => {
         const checkIsMobile = () => {
             const width = window.innerWidth;
-            setIsMobile(width >= 320 && width <= 896); //change this later
+            setIsMobile(width >= 320 && width <= 428); //change this later
             console.log(width);
         };
 
@@ -104,22 +119,22 @@ const Webpage = () => {
                     </div>
 
                     <div className="links-to-me">
-                        <a href="https://www.linkedin.com/in/devin-stockton-25846a252/">
-                        
+                        <a href="https://www.linkedin.com/in/devin-stockton-25846a252/" target="_blank" rel="noreferrer">
                             <img className='icons-to-me' src={linkedIn} alt="linkedin-icon" />
-                            
                         </a>
                         <a href="mailto:devinstockton2003@gmail.com">
                             <img className="icons-to-me" src={mail} alt="email-icon" />
                         </a>
-                        <a href="https://github.com/theDevin8">
+                        <a href="https://github.com/theDevin8" target="_blank" rel="noreferrer">
                             <img className="icons-to-me" src={github} alt="github-icon" />
                         </a>
-                        <a href="https://discord.com/users/733158227335708672">
+                        <a href="https://discord.com/users/733158227335708672" target="_blank" rel="noreferrer">
                             <img className="icons-to-me" src={discord} alt="discord-icon" />
                         </a>
 
-                        <img className="icons-to-me" src={resume} alt="resume-icon" />
+                        <a href={myresume} target="_blank" rel="noreferrer">
+                            <img className="icons-to-me" src={resume} alt="resume-icon" />
+                        </a>
 
                     </div>
 
@@ -164,19 +179,22 @@ const Webpage = () => {
             {isMobile && (
                 <div className="webpage-moblie-container">
                     <div className="links-to-me">
-                        <a href="https://www.linkedin.com/in/devin-stockton-25846a252/">
-                            <img className="icons-to-me" src={linkedIn} alt="linkedin-icon" />
+                        <a href="https://www.linkedin.com/in/devin-stockton-25846a252/" target="_blank" rel="noreferrer">
+                            <img className='icons-to-me' src={linkedIn} alt="linkedin-icon" />
                         </a>
                         <a href="mailto:devinstockton2003@gmail.com">
                             <img className="icons-to-me" src={mail} alt="email-icon" />
                         </a>
-                        <a href="https://github.com/theDevin8">
+                        <a href="https://github.com/theDevin8" target="_blank" rel="noreferrer">
                             <img className="icons-to-me" src={github} alt="github-icon" />
                         </a>
-                        <a href="https://discord.com/users/733158227335708672">
+                        <a href="https://discord.com/users/733158227335708672" target="_blank" rel="noreferrer">
                             <img className="icons-to-me" src={discord} alt="discord-icon" />
                         </a>
-                        <img className="icons-to-me" src={resume} alt="resume-icon" />
+
+                        <a href={myresume} target="_blank" rel="noreferrer">
+                            <img className="icons-to-me" src={resume} alt="resume-icon" />
+                        </a>
                     </div>
 
                     <div className="eyeball">
@@ -195,6 +213,7 @@ const Webpage = () => {
                     </label>
                     <span className="label-text">{isToggled ? "Switch to Light Mode" : "Switch to Dark Mode"}</span>
 
+                    <h2 className="welcome-message" id='welcome-message'>{welcomeMessage}</h2>
                     <div className="overall-me">
                         <p className="description">
                             Hi there! My name is Devin, and I'm a sophomore at the University of Houston.

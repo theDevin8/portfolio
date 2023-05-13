@@ -10,6 +10,7 @@ import portfolio from '../../gifs/portfolio.gif';
 import css from '../../img/css.png';
 import tg from '../../gifs/tg.gif';
 import cpp from '../../img/cpp.png';
+import comingSoon from '../../gifs/coming-soon.gif';
 
 const Projects = () => {
     const [projects, setprojects] = useState("");
@@ -56,7 +57,7 @@ const Projects = () => {
     useEffect(() => {
         const checkIsMobile = () => {
             const width = window.innerWidth;
-            setIsMobile(width >= 320 && width <= 896); //change this later
+            setIsMobile(width >= 320 && width <= 428); //change this later
             console.log(width);
         };
 
@@ -73,6 +74,29 @@ const Projects = () => {
                 <div>
                     <h1 id="projects">{projects}</h1>
                     <div className="projects-container">
+                        {/*coming sooon project*/}
+                        <div className="project-card">
+                            <div className="left-project-card">
+                                <img className="project-gif" src={comingSoon} alt="PersonalWebsite.gif"></img>
+                                <div className="list-project-tools">
+                                    <img className="projectTp-icon" src={reactIcon} alt="React.png" />
+                                    <img className="projectTp-icon" src={nodeIcon} alt="Node.png" />
+                                    <img className="projectTp-icon" src={javaScript} alt="javascript.png" />
+                                    <img className="projectTp-icon" src={css} alt="css.png" />
+                                    <img className="projectTp-icon" src={mysql} alt="mySQL.png" />
+                                </div>
+                            </div>
+
+                            <div className="right-project-card">
+                                <h3 className="project-name">{'Habitify (coming soon)'}</h3>
+                                <p className="project-description">
+                                    Habitify will be a mobile application inspired by the book Atomic Habits by James Clear, designed to help you achieve your goals by keeping track of your daily habits.
+                                    With its user-friendly interface, customizable reminders, and visual progress tracking, it's an effective tool for building and maintaining better habits. 
+                                    Whether you're looking to improve your health, productivity, or personal relationships, Habitify can help you stay on track and make progress towards your goals.
+                                </p>
+                            </div>
+                        </div>
+
                         <div className="project-card" onClick={() => window.open("https://github.com/theDevin8/Amusment_Frontend")}>
                             <div className="left-project-card">
                                 <img className="project-gif" src={amusement} alt="ThemeParkProject.gif"></img>
@@ -142,6 +166,29 @@ const Projects = () => {
                 <div>
                     <h1 id="projects">{projects}</h1>
                     <div className="projects-container">
+                        {/*coming sooon project*/}
+                        <div className="project-card">
+                            <div className="left-project-card">
+                                <img className="project-gif" src={comingSoon} alt="PersonalWebsite.gif"></img>
+                                <div className="list-project-tools">
+                                    <img className="projectTp-icon" src={reactIcon} alt="React.png" />
+                                    <img className="projectTp-icon" src={nodeIcon} alt="Node.png" />
+                                    <img className="projectTp-icon" src={javaScript} alt="javascript.png" />
+                                    <img className="projectTp-icon" src={css} alt="css.png" />
+                                    <img className="projectTp-icon" src={mysql} alt="mySQL.png" />
+                                </div>
+                            </div>
+
+                            <div className="right-project-card">
+                                <h3 className="project-name">{'Habitify (coming soon)'}</h3>
+                                <p className="project-description">
+                                    Habitify will be a mobile application inspired by the book Atomic Habits by James Clear, that helps you keep track of your daily habits and achieve your goals, 
+                                    with customizable reminders and visual progress tracking.
+                                </p>
+                            </div>
+                        </div>
+                        
+                        {/*themepark project*/}
                         <div className="project-card" onClick={() => window.open("https://github.com/theDevin8/Amusment_Frontend")}>
                             <div className="left-project-card">
                                 <img className="project-gif" src={amusement} alt="ThemeParkProject.gif"></img>
@@ -164,6 +211,7 @@ const Projects = () => {
                         </div>
                     </div>
 
+                    {/*personal project*/}
                     <div className="project-card">
                             <div className="left-project-card">
                                 <img className="project-gif" src={portfolio} alt="PersonalWebsite.gif"></img>
@@ -178,13 +226,29 @@ const Projects = () => {
                             <div className="right-project-card">
                                 <h3 className="project-name">Personal Website</h3>
                                 <p className="project-description">
-                                    Think of my personal website like a digital version of myself - it's where you can go to get to know me better, see what I'm up to, and maybe even learn a thing or two!
-                                    With its sleek design and user-friendly interface, my website is the perfect place to showcase my projects, share my passions, and connect with others.
-                                    It's like a personalized portal into my world - come on in and stay awhile!
+                                    My personal website is a digital representation of myself, where visitors can learn more about me, view my projects, 
+                                    and connect with me through its sleek design and user-friendly interface.
                                 </p>
                             </div>
                     </div>
-                
+
+                    {/*tamagotchi pet game */}
+                    <div className="project-card">
+                            <div className="left-project-card">
+                                <img className="project-gif" src={tg} alt="TamagotchiPetGame.gif"></img>
+                                <div className="list-project-tools">
+                                    <img className="project-icon" src={cpp} alt="React.png" />
+                                </div>
+                            </div>
+
+                            <div className="right-project-card">
+                                <h3 className="project-name">Tamagotchi Pet Game</h3>
+                                <p className="project-description">
+                                    Enter a world of cuteness overload with my Tamagotchi pet game - a virtual pet that you can feed, play with, and take care of, watching it 
+                                    evolve and grow under your loving care, with addictive gameplay that satisfies your craving for cute companionship.
+                                </p>
+                            </div>
+                        </div>
 
                 </div>
             )}

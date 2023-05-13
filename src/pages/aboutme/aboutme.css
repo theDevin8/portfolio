@@ -153,6 +153,17 @@
     font-weight: 200;
     margin-top: .4em;
 }
+/*music style */
+.music-gif{
+  position: relative;
+  height: 11em;
+  width: 20em;
+  border-radius: 3em;
+  margin: 0 auto 1em auto;
+}
+.aboutme-card:hover .music-gif{
+  filter: sepia(70%) saturate(150%) brightness(80%);
+}
 
 /*flexed */
 .aboutme-cards-container-flex{
@@ -232,7 +243,7 @@
 .dark-mode #aboutme{
   color: #FF8B13;
 }
-@media (max-width: 480px){
+@media (max-width: 428px){
   #aboutme{
     font-size: 24px;
   }
@@ -288,11 +299,12 @@
     height: 5em;
     width: 11em;
     margin: 0 auto;
+    margin-bottom: .3em;
   }
   .gaming-gif{
     height: 5em;
     width: 11em;
-    margin: 0 auto; 
+    margin: 0 auto;
   }
 
   .anime-gif{
@@ -305,15 +317,36 @@
     transform: none;
   }
   .aboutme-card:hover .bluelock-gif,
-    .aboutme-card:hover .coding-gif,
-    .aboutme-card:hover .gaming-gif,
-    .aboutme-card:hover .anime-gif,
-    .aboutme-card:hover .tutor-gif {
-        filter: none;
-        cursor: default;
-    }
-    
-    .aboutme-cards-container:hover .aboutme-cards {
-        animation-play-state: paused;
-    }
+  .aboutme-card:hover .coding-gif,
+  .aboutme-card:hover .gaming-gif,
+  .aboutme-card:hover .anime-gif,
+  .aboutme-card:hover .tutor-gif {
+    filter: none;
+    cursor: default;
+  }
+  
+  .aboutme-cards-container:hover .aboutme-cards {
+    animation-play-state: paused;
+  }
+  .aboutme-description-anime{
+    color: white;
+    font-weight: 200;
+    padding: 0 1em 0 1em;
+    font-size: .7em;
+    margin-bottom: 3em;
+  }
+  .aboutme-description-gaming{
+    color: white;
+    font-weight: 200;
+    padding: 0 1em 0 1em;
+    font-size: .7em;
+    margin-bottom: 2em;
+  }
+  .aboutme-description-music{
+    color: white;
+    font-weight: 200;
+    padding: 0 1em 0 1em;
+    font-size: .7em;
+    margin-bottom: 4.2em;
+  }
 }

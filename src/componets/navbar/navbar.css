@@ -42,7 +42,6 @@
   .nav-tabs a:hover::after {
     visibility: visible;
     transform: scaleX(1);
-    
   }
 
  .dark-mode .nav-item{
@@ -57,7 +56,7 @@
 
  /* style for mobile devices */
 
- @media (max-width: 896px) {
+ @media (max-width: 428px) {
   .navbar-normal-state{
     position: relative;
     display: flex;
@@ -140,4 +139,12 @@
   .nav-item:hover{
     color: black;
   }
+  .nav-tabs a::after{
+    transform: none;
+    transition: none;
+  }
+  .nav-tabs a:hover::after {
+    transform: none;
+  }
+
 }

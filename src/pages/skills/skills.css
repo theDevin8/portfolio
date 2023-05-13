@@ -54,3 +54,25 @@
 .dark-mode #skills{
   color: #FF8B13;
 }
+
+/* style for mobile */
+@media (max-width: 428px){
+   #skills{
+    font-size: 24px;
+    margin-top: 2em;
+   }
+   .skills-container{
+    height: 30em;
+    width: 23em;
+   }
+   .skills-title{
+    font-size: 16px;
+   }
+   .list-skills img {
+    width: 2em;
+    margin: 0.5em;
+  }
+   .programming-lang{
+    font-size: 10px;
+   }
+}

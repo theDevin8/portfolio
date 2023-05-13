@@ -19,7 +19,7 @@ function Navbar() {
     useEffect(() => {
         const checkIsMobile = () => {
             const width = window.innerWidth;
-            setIsMobile(width >= 320 && width <= 496); //change this later
+            setIsMobile(width >= 320 && width <= 428); //change this later
             console.log(width);
         };
 

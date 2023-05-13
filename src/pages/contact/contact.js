@@ -47,40 +47,93 @@ const Contact = () =>{
         });
     }, []);
 
+    const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+        const checkIsMobile = () => {
+            const width = window.innerWidth;
+            setIsMobile(width >= 320 && width <= 428); //change this later
+            console.log(width);
+        };
+
+        window.addEventListener('resize', checkIsMobile);
+        checkIsMobile();
+        return () => {
+            window.removeEventListener('resize', checkIsMobile);
+        };
+      }, []);
 
     return(
         <div className="contact-element">
-            <h1 id="contact">{contact}</h1>
-            <div className="overall-me">
-                <p className="description">
-                Looking to slide into my DMs? My contact me page is the perfect spot to do just that! It's the virtual equivalent of a handshake and a smile, a place where you can reach out and say hi. 
-                Whether you want to connect for professional networking or just shoot the breeze, my contact me page is the perfect place to start. 
-                So come on down and drop me a line - who knows where our conversation could take us!
-                </p>
-            </div>
+            {!isMobile && (
+                <div>
+                    <h1 id="contact">{contact}</h1>
+                    <div className="overall-me">
+                        <p className="description">
+                            Looking to slide into my DMs? My contact me page is the perfect spot to do just that! It's the virtual equivalent of a handshake and a smile, a place where you can reach out and say hi.
+                            Whether you want to connect for professional networking or just shoot the breeze, my contact me page is the perfect place to start.
+                            So come on down and drop me a line - who knows where our conversation could take us!
+                        </p>
+                    </div>
 
-            <div className="list-to-contact">
-                <div className="contact-icon-container">
-                    <a href="mailto:devinstockton2003@gmail.com">
-                        <img className="contact-icon" src={mail} alt="mail.png"/>
-                    </a>
-                    <h2 className="contact-title">Email</h2>
-                    
+                    <div className="list-to-contact">
+                        <div className="contact-icon-container">
+                            <a href="mailto:devinstockton2003@gmail.com">
+                                <img className="contact-icon" src={mail} alt="mail.png" />
+                            </a>
+                            <h2 className="contact-title">Email</h2>
+
+                        </div>
+                        <div className="contact-icon-container">
+                            <a href="https://www.linkedin.com/in/devin-stockton-25846a252/">
+                                <img className="contact-icon" src={linkedin} alt="linkedin.png" />
+                            </a>
+                            <h2 className="contact-title">LinkedIn</h2>
+                        </div>
+                        <div className="contact-icon-container">
+                            <a href="https://discord.com/users/733158227335708672">
+                                <img className="contact-icon" src={discord} alt="discord.png" />
+                            </a>
+                            <h2 className="contact-title">Discord</h2>
+                        </div>
+                    </div>
+                    <p className="description-p">© Created by Devin Stockton</p>
                 </div>
-                <div className="contact-icon-container">
-                    <a href="https://www.linkedin.com/in/devin-stockton-25846a252/">
-                        <img className="contact-icon" src={linkedin} alt="linkedin.png"/>
-                    </a>
-                    <h2 className="contact-title">LinkedIn</h2>
+            )}
+            {isMobile && (
+                <div>
+                    <h1 id="contact">{contact}</h1>
+                    <div className="overall-me">
+                        <p className="description">
+                            Looking to slide into my DMs? My contact me page is the perfect spot to do just that! It's the virtual equivalent of a handshake and a smile, a place where you can reach out and say hi.
+                            Whether you want to connect for professional networking or just shoot the breeze, my contact me page is the perfect place to start.
+                            So come on down and drop me a line - who knows where our conversation could take us!
+                        </p>
+                    </div>
+
+                    <div className="list-to-contact">
+                        <div className="contact-icon-container">
+                            <a href="mailto:devinstockton2003@gmail.com">
+                                <img className="contact-icon" src={mail} alt="mail.png" />
+                            </a>
+                            <h2 className="contact-title">Email</h2>
+
+                        </div>
+                        <div className="contact-icon-container">
+                            <a href="https://www.linkedin.com/in/devin-stockton-25846a252/">
+                                <img className="contact-icon" src={linkedin} alt="linkedin.png" />
+                            </a>
+                            <h2 className="contact-title">LinkedIn</h2>
+                        </div>
+                        <div className="contact-icon-container">
+                            <a href="https://discord.com/users/733158227335708672">
+                                <img className="contact-icon" src={discord} alt="discord.png" />
+                            </a>
+                            <h2 className="contact-title">Discord</h2>
+                        </div>
+                    </div>
+                    <p className="description-p">© Created by Devin Stockton</p>
                 </div>
-                <div className="contact-icon-container">
-                    <a href="https://discord.com/users/733158227335708672">
-                        <img className="contact-icon" src={discord} alt="discord.png"/>
-                    </a>
-                    <h2 className="contact-title">Discord</h2>
-                </div>
-            </div>
-            <p className="description-p">© Created by Devin Stockton</p>
+            )}
         </div>
     )
 }

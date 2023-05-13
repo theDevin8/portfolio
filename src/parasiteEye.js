@@ -12,10 +12,10 @@ export function ParasiteEye({ cursorPos }) {
 
   
   const handleMouseMove = (event) => {
-    const mouseX = event.clientX;
-    const mouseY = event.clientY;
-  
-    if (group.current?.rotation) {
+    if(!isMobile && group.current && group.current.rotation) {
+      const mouseX = event.clientX;
+      const mouseY = event.clientY;
+
       group.current.rotation.y = (mouseX / window.innerWidth) * 2.5 - 1 ?? 0;
       group.current.rotation.x = (mouseY / window.innerHeight) * 2.5 - 1 ?? 0;
     }
@@ -25,7 +25,7 @@ export function ParasiteEye({ cursorPos }) {
   useEffect(() => {
       const checkIsMobile = () => {
           const width = window.innerWidth;
-          setIsMobile(width >= 320 && width <= 961); //change this later
+          setIsMobile(width >= 320 && width <= 428); //change this later
           console.log(width);
       };
 
@@ -39,8 +39,10 @@ export function ParasiteEye({ cursorPos }) {
   useEffect(() => {
     let animationId;
     const animateEye = () => {
-      group.current.rotation.y -= 0.01; // change the rotation speed if needed
-      animationId = requestAnimationFrame(animateEye);
+      if (group.current && group.current.rotation) {
+        group.current.rotation.y -= 0.01; // change the rotation speed if needed
+        animationId = requestAnimationFrame(animateEye);
+      }
     };
     if (isMobile) {
       animationId = requestAnimationFrame(animateEye);
@@ -54,7 +56,7 @@ export function ParasiteEye({ cursorPos }) {
         document.removeEventListener("mousemove", handleMouseMove);
       }
     };
-  }, [isMobile]);
+  }, );
   
   useEffect(() => {
     if (isMobile) {
@@ -64,7 +66,8 @@ export function ParasiteEye({ cursorPos }) {
     return () => {
       document.removeEventListener("mousemove", handleMouseMove);
     };
-  }, [isMobile]);
+  },);
+
   return (
     <group ref={group}>
       <primitive object={gltf.scene} scale={isMobile ? [1.5, 1.5, 1.5] : [2.2, 2.2, 2.2]}/>
