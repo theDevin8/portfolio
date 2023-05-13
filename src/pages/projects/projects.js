@@ -90,7 +90,7 @@ const Projects = () => {
                             <div className="right-project-card">
                                 <h3 className="project-name">{'O(n)Track (coming soon)'}</h3>
                                 <p className="project-description">
-                                    Habitify will be a mobile application inspired by the book Atomic Habits by James Clear, designed to help you achieve your goals by keeping track of your daily habits.
+                                    {'O(n)Track'} will be a mobile application inspired by the book Atomic Habits by James Clear, designed to help you achieve your goals by keeping track of your daily habits.
                                     With its user-friendly interface, customizable reminders, and visual progress tracking, it's an effective tool for building and maintaining better habits. 
                                     Whether you're looking to improve your health, productivity, or personal relationships, Habitify can help you stay on track and make progress towards your goals.
                                 </p>
@@ -182,8 +182,7 @@ const Projects = () => {
                             <div className="right-project-card">
                                 <h3 className="project-name">{'O(n)Track (coming soon)'}</h3>
                                 <p className="project-description">
-                                    Habitify will be a mobile application inspired by the book Atomic Habits by James Clear, that helps you keep track of your daily habits and achieve your goals, 
-                                    with customizable reminders and visual progress tracking.
+                                    {'O(n)Track will be a mobile application inspired by the book Atomic Habits by James Clear, that helps you keep track of your daily habits and achieve your goals, with customizable reminders and visual progress tracking.'}
                                 </p>
                             </div>
                         </div>
