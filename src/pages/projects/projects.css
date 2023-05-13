@@ -25,6 +25,22 @@
 .project-card:hover {
     transform: scale(1.05);
 }
+.project-card-newProject{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: #ba8686;
+  height: 20em;
+  width: 55em;
+  border-radius: 3em;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 2em;
+  transition: transform 0.3s ease-in-out;
+}
+.project-card-newProject:hover{
+  transform: scale(1.05);
+}
 
   .left-project-card {
     display: flex;
@@ -83,7 +99,9 @@
     width: 30em;
     color: white;
   }
-  
+  .project-card-newProject:hover .project-gif{
+    filter: sepia(70%) saturate(150%) brightness(80%);
+  }
 .project-card:hover .project-gif{
     filter: sepia(70%) saturate(150%) brightness(80%);
 }
@@ -91,7 +109,9 @@
 .dark-mode .project-card{
   background-color: #d18d57;
 }
-
+.dark-mode .project-card-newProject{
+  background-color: #d18d57;
+}
 .dark-mode #projects{
   color: #FF8B13;
 }

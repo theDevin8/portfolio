@@ -84,13 +84,13 @@ const Contact = () =>{
 
                         </div>
                         <div className="contact-icon-container">
-                            <a href="https://www.linkedin.com/in/devin-stockton-25846a252/">
+                            <a href="https://www.linkedin.com/in/devin-stockton-25846a252/" target="_blank" rel="noreferrer">
                                 <img className="contact-icon" src={linkedin} alt="linkedin.png" />
                             </a>
                             <h2 className="contact-title">LinkedIn</h2>
                         </div>
                         <div className="contact-icon-container">
-                            <a href="https://discord.com/users/733158227335708672">
+                            <a href="https://discord.com/users/733158227335708672" target="_blank" rel="noreferrer">
                                 <img className="contact-icon" src={discord} alt="discord.png" />
                             </a>
                             <h2 className="contact-title">Discord</h2>

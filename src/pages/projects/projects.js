@@ -75,7 +75,7 @@ const Projects = () => {
                     <h1 id="projects">{projects}</h1>
                     <div className="projects-container">
                         {/*coming sooon project*/}
-                        <div className="project-card">
+                        <div className="project-card-newProject">
                             <div className="left-project-card">
                                 <img className="project-gif" src={comingSoon} alt="PersonalWebsite.gif"></img>
                                 <div className="list-project-tools">
@@ -119,7 +119,7 @@ const Projects = () => {
                             </div>
                         </div>
 
-                        <div className="project-card">
+                        <div className="project-card" onClick={() => window.open("https://github.com/theDevin8/portfolio")}>
                             <div className="left-project-card">
                                 <img className="project-gif" src={portfolio} alt="PersonalWebsite.gif"></img>
                                 <div className="list-project-tools">
@@ -140,7 +140,7 @@ const Projects = () => {
                             </div>
                         </div>
 
-                        <div className="project-card">
+                        <div className="project-card" onClick={() => window.open("https://youtu.be/ATUc_58szHU")}>
                             <div className="left-project-card">
                                 <img className="project-gif" src={tg} alt="TamagotchiPetGame.gif"></img>
                                 <div className="list-project-tools">
@@ -212,7 +212,7 @@ const Projects = () => {
                     </div>
 
                     {/*personal project*/}
-                    <div className="project-card">
+                    <div className="project-card" onClick={() => window.open("https://github.com/theDevin8/portfolio")}>
                             <div className="left-project-card">
                                 <img className="project-gif" src={portfolio} alt="PersonalWebsite.gif"></img>
                                 <div className="list-project-tools">
@@ -233,7 +233,7 @@ const Projects = () => {
                     </div>
 
                     {/*tamagotchi pet game */}
-                    <div className="project-card">
+                    <div className="project-card" onClick={() => window.open("https://youtu.be/ATUc_58szHU")}>
                             <div className="left-project-card">
                                 <img className="project-gif" src={tg} alt="TamagotchiPetGame.gif"></img>
                                 <div className="list-project-tools">
