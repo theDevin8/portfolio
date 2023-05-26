@@ -1,22 +1,18 @@
 import React, { useState, useEffect } from "react";
+import { SiJavascript, SiReact, SiNodedotjs, SiCss3, SiMysql } from "react-icons/si";
+import { TbBrandCpp } from "react-icons/tb";
 import ScrollReveal from "scrollreveal";
 import './projects.css'
 import amusement from '../../gifs/amusement.gif';
-import reactIcon from '../../img/react.png';
-import nodeIcon from '../../img/node.png';
-import javaScript from '../../img/javascript.png';
-import mysql from '../../img/mySql.png';
 import portfolio from '../../gifs/portfolio.gif';
-import css from '../../img/css.png';
 import tg from '../../gifs/tg.gif';
-import cpp from '../../img/cpp.png';
 import comingSoon from '../../gifs/coming-soon.gif';
 
 const Projects = () => {
     const [projects, setprojects] = useState("");
 
     useEffect(() => {
-        const message = "<projects/>";
+        const message = "< projects >";
         const typeMessage = () => {
             let i = 0;
             const intervalId = setInterval(() => {
@@ -42,16 +38,16 @@ const Projects = () => {
 
     useEffect(() => {
         ScrollReveal().reveal(".project-element", {
-          delay: 200,
-          distance: "50px",
-          duration: 1000,
-          easing: "ease-out",
-          origin: "bottom",
-          reset: true,
-          scale: 1,
-          viewFactor: 0,
+            delay: 200,
+            distance: "6px",
+            duration: 1000,
+            easing: "ease-out",
+            origin: "bottom",
+            reset: true,
+            scale: 1,
+            viewFactor: 0,
         });
-      }, []);
+    }, []);
 
     const [isMobile, setIsMobile] = useState(false);
     useEffect(() => {
@@ -68,7 +64,7 @@ const Projects = () => {
         };
     }, []);
 
-    return( 
+    return (
         <div className="project-element">
             {!isMobile && (
                 <div>
@@ -79,33 +75,33 @@ const Projects = () => {
                             <div className="left-project-card">
                                 <img className="project-gif" src={comingSoon} alt="PersonalWebsite.gif"></img>
                                 <div className="list-project-tools">
-                                    <img className="projectTp-icon" src={reactIcon} alt="React.png" />
-                                    <img className="projectTp-icon" src={nodeIcon} alt="Node.png" />
-                                    <img className="projectTp-icon" src={javaScript} alt="javascript.png" />
-                                    <img className="projectTp-icon" src={css} alt="css.png" />
-                                    <img className="projectTp-icon" src={mysql} alt="mySQL.png" />
+                                    <SiReact className="projectTp-icon" />
+                                    <SiNodedotjs className="projectTp-icon" />
+                                    <SiJavascript className="projectTp-icon" />
+                                    <SiCss3 className="projectTp-icon" />
+                                    <SiMysql className="projectTp-icon" />
                                 </div>
                             </div>
 
                             <div className="right-project-card">
                                 <h3 className="project-name">{'O(n)Track (coming soon)'}</h3>
                                 <p className="project-description">
-                                    {'O(n)Track'} will be a mobile application inspired by the book Atomic Habits by James Clear, designed to help you achieve your goals by keeping track of your daily habits.
-                                    With its user-friendly interface, customizable reminders, and visual progress tracking, it's an effective tool for building and maintaining better habits. 
+                                    {'O(n)Track'} will be an application inspired by the book Atomic Habits by James Clear, designed to help you achieve your goals by keeping track of your daily habits.
+                                    With its user-friendly interface, customizable reminders, and visual progress tracking, it's an effective tool for building and maintaining better habits.
                                     Whether you're looking to improve your health, productivity, or personal relationships, Habitify can help you stay on track and make progress towards your goals.
                                 </p>
                             </div>
                         </div>
-
+                        {/*rest of projects */}
                         <div className="project-card" onClick={() => window.open("https://github.com/theDevin8/Amusment_Frontend")}>
                             <div className="left-project-card">
                                 <img className="project-gif" src={amusement} alt="ThemeParkProject.gif"></img>
                                 <div className="list-project-tools">
-                                    <img className="projectTp-icon" src={reactIcon} alt="React.png" />
-                                    <img className="projectTp-icon" src={nodeIcon} alt="Node.png" />
-                                    <img className="projectTp-icon" src={javaScript} alt="javascript.png" />
-                                    <img className="projectTp-icon" src={css} alt="css.png" />
-                                    <img className="projectTp-icon" src={mysql} alt="mySQL.png" />
+                                    <SiReact className="projectTp-icon" />
+                                    <SiNodedotjs className="projectTp-icon" />
+                                    <SiJavascript className="projectTp-icon" />
+                                    <SiCss3 className="projectTp-icon" />
+                                    <SiMysql className="projectTp-icon" />
                                 </div>
                             </div>
 
@@ -123,9 +119,9 @@ const Projects = () => {
                             <div className="left-project-card">
                                 <img className="project-gif" src={portfolio} alt="PersonalWebsite.gif"></img>
                                 <div className="list-project-tools">
-                                    <img className="projectP-icon" src={reactIcon} alt="React.png" />
-                                    <img className="projectP-icon" src={javaScript} alt="Node.png" />
-                                    <img className="projectP-icon" src={css} alt="javascript.png" />
+                                    <SiReact className="projectP-icon" />
+                                    <SiJavascript className="projectP-icon" />
+                                    <SiCss3 className="projectP-icon" />
 
                                 </div>
                             </div>
@@ -144,7 +140,7 @@ const Projects = () => {
                             <div className="left-project-card">
                                 <img className="project-gif" src={tg} alt="TamagotchiPetGame.gif"></img>
                                 <div className="list-project-tools">
-                                    <img className="project-icon" src={cpp} alt="React.png" />
+                                    <TbBrandCpp className="project-icon" />
                                 </div>
                             </div>
 
@@ -161,7 +157,7 @@ const Projects = () => {
                     </div>
                 </div>
             )}
-            
+
             {isMobile && (
                 <div>
                     <h1 id="projects">{projects}</h1>
@@ -171,53 +167,50 @@ const Projects = () => {
                             <div className="left-project-card">
                                 <img className="project-gif" src={comingSoon} alt="PersonalWebsite.gif"></img>
                                 <div className="list-project-tools">
-                                    <img className="projectTp-icon" src={reactIcon} alt="React.png" />
-                                    <img className="projectTp-icon" src={nodeIcon} alt="Node.png" />
-                                    <img className="projectTp-icon" src={javaScript} alt="javascript.png" />
-                                    <img className="projectTp-icon" src={css} alt="css.png" />
-                                    <img className="projectTp-icon" src={mysql} alt="mySQL.png" />
+                                    <SiReact className="projectTp-icon" />
+                                    <SiNodedotjs className="projectTp-icon" />
+                                    <SiJavascript className="projectTp-icon" />
+                                    <SiCss3 className="projectTp-icon" />
+                                    <SiMysql className="projectTp-icon" />
                                 </div>
                             </div>
 
                             <div className="right-project-card">
                                 <h3 className="project-name">{'O(n)Track (coming soon)'}</h3>
                                 <p className="project-description">
-                                    {'O(n)Track will be a mobile application inspired by the book Atomic Habits by James Clear, that helps you keep track of your daily habits and achieve your goals, with customizable reminders and visual progress tracking.'}
+                                    {'O(n)Track will be an application inspired by the book Atomic Habits by James Clear, that helps you keep track of your daily habits and achieve your goals, with customizable reminders and visual progress tracking.'}
                                 </p>
                             </div>
                         </div>
-                        
-                        {/*themepark project*/}
+                        {/*rest of projects */}
                         <div className="project-card" onClick={() => window.open("https://github.com/theDevin8/Amusment_Frontend")}>
                             <div className="left-project-card">
                                 <img className="project-gif" src={amusement} alt="ThemeParkProject.gif"></img>
                                 <div className="list-project-tools">
-                                    <img className="projectTp-icon" src={reactIcon} alt="React.png" />
-                                    <img className="projectTp-icon" src={nodeIcon} alt="Node.png" />
-                                    <img className="projectTp-icon" src={javaScript} alt="javascript.png" />
-                                    <img className="projectTp-icon" src={css} alt="css.png" />
-                                    <img className="projectTp-icon" src={mysql} alt="mySQL.png" />
+                                    <SiReact className="projectTp-icon" />
+                                    <SiNodedotjs className="projectTp-icon" />
+                                    <SiJavascript className="projectTp-icon" />
+                                    <SiCss3 className="projectTp-icon" />
+                                    <SiMysql className="projectTp-icon" />
                                 </div>
                             </div>
 
                             <div className="right-project-card">
                                 <h3 className="project-name">Theme Park Management System</h3>
                                 <p className="project-description">
-                                Our theme park management system is a cutting-edge technology that enables you to manage everything from ride operations to staffing schedules, 
-                                all in one convenient and user-friendly interface.
+                                    Our theme park management system is a cutting-edge technology that enables you to manage everything from ride operations to staffing schedules,
+                                    all in one convenient and user-friendly interface.
                                 </p>
                             </div>
                         </div>
-                    </div>
 
-                    {/*personal project*/}
-                    <div className="project-card" onClick={() => window.open("https://github.com/theDevin8/portfolio")}>
+                        <div className="project-card" onClick={() => window.open("https://github.com/theDevin8/portfolio")}>
                             <div className="left-project-card">
                                 <img className="project-gif" src={portfolio} alt="PersonalWebsite.gif"></img>
                                 <div className="list-project-tools">
-                                    <img className="projectP-icon" src={reactIcon} alt="React.png" />
-                                    <img className="projectP-icon" src={javaScript} alt="Node.png" />
-                                    <img className="projectP-icon" src={css} alt="javascript.png" />
+                                    <SiReact className="projectP-icon" />
+                                    <SiJavascript className="projectP-icon" />
+                                    <SiCss3 className="projectP-icon" />
 
                                 </div>
                             </div>
@@ -225,30 +218,29 @@ const Projects = () => {
                             <div className="right-project-card">
                                 <h3 className="project-name">Personal Website</h3>
                                 <p className="project-description">
-                                    My personal website is a digital representation of myself, where visitors can learn more about me, view my projects, 
+                                    My personal website is a digital representation of myself, where visitors can learn more about me, view my projects,
                                     and connect with me through its sleek design and user-friendly interface.
                                 </p>
                             </div>
-                    </div>
+                        </div>
 
-                    {/*tamagotchi pet game */}
-                    <div className="project-card" onClick={() => window.open("https://youtu.be/ATUc_58szHU")}>
+                        <div className="project-card" onClick={() => window.open("https://youtu.be/ATUc_58szHU")}>
                             <div className="left-project-card">
                                 <img className="project-gif" src={tg} alt="TamagotchiPetGame.gif"></img>
                                 <div className="list-project-tools">
-                                    <img className="project-icon" src={cpp} alt="React.png" />
+                                    <TbBrandCpp className="project-icon" />
                                 </div>
                             </div>
 
                             <div className="right-project-card">
                                 <h3 className="project-name">Tamagotchi Pet Game</h3>
                                 <p className="project-description">
-                                    Enter a world of cuteness overload with my Tamagotchi pet game - a virtual pet that you can feed, play with, and take care of, watching it 
+                                    Enter a world of cuteness overload with my Tamagotchi pet game - a virtual pet that you can feed, play with, and take care of, watching it
                                     evolve and grow under your loving care, with addictive gameplay that satisfies your craving for cute companionship.
                                 </p>
                             </div>
                         </div>
-
+                    </div>
                 </div>
             )}
 

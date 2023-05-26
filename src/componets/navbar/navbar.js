@@ -1,21 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
+
+
 import './navbar.css';
 
 function Navbar() {
-    
-    const handleScroll = (event) =>{
+
+    const handleScroll = (event) => {
         event.preventDefault();
         const targetId = event.currentTarget.getAttribute('href').substring(1);
         const targetElement = document.querySelector(targetId);
         targetElement.scrollIntoView({ behavior: 'smooth' });
     };
-    
-    const [isOpen, setIsOpen] = useState(false);
-    const [navbar_class, setNavbarClass] = useState("navbar-bar unclicked");
-    const [isMobile, setIsMobile] = useState(false);
-    
 
+    const [isMobile, setIsMobile] = useState(false);
     useEffect(() => {
         const checkIsMobile = () => {
             const width = window.innerWidth;
@@ -29,30 +28,14 @@ function Navbar() {
             window.removeEventListener('resize', checkIsMobile);
         };
     }, []);
-    
-    const handleToggle = () => {
-        if(!isOpen){
-            setNavbarClass("navbar-bar clicked")
-        } else{
-            setNavbarClass("navbar-bar unclicked")
-        }
-        setIsOpen(!isOpen);
-        
-    };
-   
+
     return (
         <nav className='navbar'>
-            {isMobile && (
-                <div className='navbar-container'>
-                    {/*navbar not on click */}
-                        <div className="navbar-menu" onClick={handleToggle}>
-                            <div className={navbar_class} />
-                            <div className={navbar_class} />
-                            <div className={navbar_class} />
-                        </div>
-
+            {!isMobile && (
+                <div className='navbar-container '>
+                    <div className='left-box'>
                         <div className='Iam'>
-                            <p className='navbar-greeting'>Hello World, I am</p>
+                            <p>Hello, I am</p>
                             <b>
                                 <div className='innerIam'>
                                     Devin Stockton.<br />
@@ -63,47 +46,38 @@ function Navbar() {
                                 </div>
                             </b>
                         </div>
-                    
-                    {/*navbar on click */}
-                    {isOpen && (
-                        <div className='navbar-mobile-menu'>
-                            <Link to='#aboutme' className='nav-item' onClick={handleScroll} >
-                                {'About Me'}
-                            </Link>
-                            <Link to='#projects' className='nav-item' onClick={handleScroll}>
-                                {'Projects'}
-                            </Link>
-                            <Link to='#skills' className='nav-item' onClick={handleScroll}>
-                                {'Skills'}
-                            </Link>
-                            <Link to='#contact' className='nav-item' onClick={handleScroll}>
-                                {'Contact Me'}
-                            </Link>
+
+                        <div className="icons-box">
+                            <a href="https://github.com/theDevin8">
+                                <FaGithub className='icons' />
+                            </a>
+                            <a href="mailto:devinstockton2003@gmail.com" >
+                                <FaEnvelope className='icons' />
+                            </a>
+                            <a href="https://www.linkedin.com/in/devin-stockton-25846a252/">
+                                <FaLinkedin className='icons' />
+                            </a>
                         </div>
-                    )}
-                </div>
-            )}
-            
-            {!isMobile && (
-                <div className='navbar-container'>
+
+                    </div>
+
                     <div className='nav-tabs'>
-                        <Link to='#aboutme' className = "aboutme-nav" onClick={handleScroll}>
-                            <h1 className='nav-item'>{'About Me'}</h1>
+                        <Link to="#webpage-element" className='webpage-nav' onClick={handleScroll}>
+                            <h1 className='nav-item'>{'Home'}</h1>
+                        </Link>
+                        <Link to='#aboutme' className="aboutme-nav" onClick={handleScroll}>
+                            <h1 className='nav-item'>{'About'}</h1>
                         </Link>
                         <Link to='#projects' className='projects-nav' onClick={handleScroll}>
                             <h1 className='nav-item'>{'Projects'}</h1>
                         </Link>
-                        <Link to='#skills' className='skills-nav' onClick={handleScroll}>
-                            <h1 className='nav-item'>{'Skills'}</h1>
-                        </Link>
                         <Link to='#contact' className='skills-nav' onClick={handleScroll}>
-                            <h1 className='nav-item'>{'Contact Me'}</h1>
+                            <h1 className='nav-item'>{'Contact'}</h1>
                         </Link>
                     </div>
                 </div>
             )}
-
-        </nav>   
+        </nav>
     )
 }
 export default Navbar;

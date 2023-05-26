@@ -1,230 +1,76 @@
 /*welcome message style */
+.home-page {
+  margin-top: 2em;
+  height: 45em;
+}
+
 .welcome-message {
-    align-items: center;
-    text-align: center;
-    margin-top: 0;
-    font-size: 3em;
-    height: 1.3em;
-    overflow: hidden;
-    white-space: nowrap;
+  margin-left: .4em;
+  margin-top: 0;
+  font-size: 3em;
+  height: 1.3em;
+  overflow: hidden;
+  white-space: nowrap;
+  color: white;
 }
+
 .overall-me {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    font-weight: 300;
-    font-size: 1.5em;
-    margin: auto;
-    width: 70%;
-}
-.description{
-    padding-left: 20px;
-    padding-right: 20px;
-    font-weight: bolder;
-    font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+  font-weight: 300;
+  font-size: 1em;
+  max-width: 50em;
 }
 
-/*style for eyeball*/
-.eyeball {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-  }
-.toggle-dark-mode{    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 20px; 
+.description {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 1.3em;
+  color: white;
 }
 
-/*Iam message styel */
-.Iam {
-    padding-bottom: 1em;
-    font:  40px/50px Urbanist, sans-serif;
-    font-weight: bold;
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.Iam p {
-    height: 50px;
-    float: left;
-    margin-right: 0.3em;
-}
-.Iam b {
-    float: left;
-    overflow: hidden;
-    position: relative;
-    height: 50px;
-}
-.Iam .innerIam {
-    display: inline-block;
-    color: #990000;
-    position: relative;
-    white-space: nowrap;
-    top: 0;
-    left: 0;
-
-  /*animation*/
-  -webkit-animation:move 5s;
-     -moz-animation:move 5s;
-      -ms-animation:move 5s;
-       -o-animation:move 5s;
-          animation:move 5s;
-  /*animation-iteration-count*/
-  -webkit-animation-iteration-count:infinite;
-     -moz-animation-iteration-count:infinite;
-      -ms-animation-iteration-count:infinite;
-       -o-animation-iteration-count:infinite;
-          animation-iteration-count:infinite;
-  /*animation-delay*/
-  -webkit-animation-delay:1s;
-     -moz-animation-delay:1s;
-      -ms-animation-delay:1s;
-       -o-animation-delay:1s;
-          animation-delay:1s;
+.special-words {
+  color: #558e61;
+  font-weight: bolder;
 }
 
-@keyframes move{
-  0%  { top: 0px; }
-  20% { top: -50px; }
-  40% { top: -100px; }
-  60% { top: -150px; }
-  80% { top: -200px; }
-}
-  
-@-webkit-keyframes move {
-      0%  { top: 0px; }
-      20% { top: -50px; }
-      40% { top: -100px; }
-      60% { top: -150px; }
-      80% { top: -200px; }
-}
-@-moz-keyframes move {
-      0%  { top: 0px; }
-      20% { top: -50px; }
-      40% { top: -100px; }
-      60% { top: -150px; }
-      80% { top: -200px; }
-}
-@-o-keyframes move {
-      0%  { top: 0px; }
-      20% { top: -50px; }
-      40% { top: -100px; }
-      60% { top: -150px; }
-      80% { top: -200px; }
-}
-@keyframes move {
-      0%  { top: 0px; }
-      20% { top: -50px; }
-      40% { top: -100px; }
-      60% { top: -150px; }
-      80% { top: -200px; }
+.mail-icon {
+  padding-right: 1em;
+  padding-top: .1em;
+  margin-top: .1em;
 }
 
-/*icon styles*/
-.links-to-me {
-    position: relative;
-    top: calc(30% + 5em);
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.icons-to-me {
-    width: 3em;
-    height: 3em;
-    margin: 0 1em;
-    transition: transform 0.2s ease-in-out;
-}
-.icons-to-me:hover {
-    transform: translateY(-10px) scale(1.2);
+.email-button {
+  display: inline-block;
+  border: 2px solid #3b6444;
+  color: #bcbcbc;
+  text-decoration: none;
+  background-color: transparent;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+  margin-left: 1em;
 }
 
-/*toggle dark mode */
-.toggle {
-    display: flex;
-    border-radius: 4em;
-    background-color: white;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    height: 2.5em;
-    width: 5em;
-    margin: 0 auto;
-    margin-bottom: 1em;
-  }
-  .circle {
-    position: absolute;
-    background-color: #ac4848;
-    height: 2em;
-    width: 2em;
-    border-radius: 50%;
-    margin-top: 0.3em;
-    margin-left: 0.2em;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .circle.right {
-    transform: translateX(2.6em);
-  }
-  .label-text{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1em;
-  }
-  /*dark mode styles */
-  body.dark-mode {
-    background-color: #0d0600;
-    color: #fff;
+.email-button:hover {
+  background-color: #569363;
+  /* Color change on hover */
+  color: #fff;
+  /* Text color change on hover */
 }
-  .dark-mode .circle {
-    background-color: #FFA559;
-  }
 
-  .dark-mode .Iam {
-    color: white;
-  }
-.dark-mode .Iam .innerIam{
-    color: #FF8B13;
-}
+
 /*moblie css */
 @media (max-width: 428px) {
-  .welcome-message{
-    font-size: 20px;
+  .welcome-message {
+    font-size: 1.6em;
+    text-align: center;
+    margin-top: .3em;
   }
-  .links-to-me{
-    position: relative;
-    display: flex;
-    margin-top: 5em;
+
+  .description {
+    text-align: center;
+    font-size: 1.2em;
   }
-  .icons-to-me{
-    height: 2em;
-    width: 2em;
-  }
-  .toggle{
-    height: 1.7em;
-    width: 4.4em;
-  }
-  .circle{
-    height: 1.5em;
-    width: 1.5em;
-    margin-top: 0.12em;
-    margin-left:0.1em;
-  }
-  .dark-mode .circle{
-    margin-left: 0;
-    padding: 0;
-    margin-right:0;
-  }
-  .description{
-    font-size: .5em;
-    padding: .5em;
-  }
+
 
 }

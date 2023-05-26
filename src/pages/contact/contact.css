@@ -1,81 +1,78 @@
-#contact{
-    font-weight: bold;
-    font-size: 48px;
-    text-align: center;
-    height: 2em;
-    margin-top: 1.5em;
-    color: #990000;
+#contact {
+  font-weight: bold;
+  font-size: 48px;
+  margin-top: 1.5em;
+  margin-left: .4em;
+  color: #ffffff;
 }
 
-.list-to-contact{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+.list-to-contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
+
 .contact-icon-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 4em;
-  }
-  .list-to-contact-container {
-    display: flex;
-    justify-content: center;
-  }
-  .contact-icon{
-    transition: transform 0.2s ease-in-out;
-  }
-  .contact-icon:hover {
-    transform: translateY(-10px) scale(1.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 4em;
 }
-  .description-p{
-    display: flex;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-weight: bolder;
-    font-size: 1.3em;
-    align-items: center;
-    justify-content: center;
+
+.list-to-contact-container {
+  display: flex;
+  justify-content: center;
 }
-.credits{
+
+.contact-icon {
+  transition: transform 0.2s ease-in-out;
+}
+
+.contact-icon:hover {
+  transform: translateY(-10px) scale(1.2);
+}
+
+.contact-title {
+  color: white;
+}
+
+.description-p {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: bolder;
+  font-size: 1.3em;
+  align-items: center;
+  justify-content: center;
+  color: #bcbcbc;
+}
+
+.credits {
   text-align: center;
   font-size: 10px;
 }
 
-.dark-mode #contact{
-  color: #FF8B13;
-}
-
 /* style for mobile */
-@media (max-width: 428px){
-  #contact{
-    font-size: 24px;
-    margin-top: 2em;
-    margin-bottom: 0;
+@media (max-width: 428px) {
+  #contact {
+    font-size: 1.7em;
+    margin-bottom: 1em;
+    margin-left: .5em;
   }
-  .contact-icon{
-    height: 2em;
-    width: 2em;
 
-  }
-  .contact-icon-container{
-    margin: 0;
-    padding: 10px;
-  }
-  .contact-title{
+  .contact-title {
     font-size: 10px;
   }
-  .description{
-    margin: 0;
+
+  .description-contact {
+    color: white;
+    width: 22em;
+    margin-left: 1em;
   }
-  .description-p{
-    font-size: 10px;
-  }
-  .credits{
-    font-size: 4px;
-    width: 400px;
-    margin: 0 auto;
-    text-align: center;
+
+  .credits {
+    font-size: 1em;
+    color: #bcbcbc;
   }
 }

@@ -1,352 +1,310 @@
-#aboutme{
-    font-weight: bold;
-    font-size: 48px;
-    text-align: center;
-    height: 2em;
-    color: #990000;
+.aboutme-element {
+  margin-top: 10em;
 }
-.aboutme-link{
-    text-decoration: none;
+
+#aboutme {
+  font-weight: bold;
+  font-size: 48px;
+  height: 2em;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  margin-left: .4em;
+}
+
+.about-page {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.about-title {
+  color: #ffffff;
+  font-size: 2em;
+  margin-left: 1em;
+}
+
+.aboutme-link {
+  text-decoration: none;
 }
 
 /*about me card style */
-.aboutme-cards-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 35em;
-    overflow: hidden;
-  }
-  
-  .aboutme-cards {
-    display: flex;
-    flex-wrap: nowrap;
-    animation: slide 35s linear infinite;
-  }
-  
-  .aboutme-card {
-    height: 30em;
-    width: 21em;
-    background: #ba8686;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.5s ease-in-out;
-    margin: 1em 2em;
-    scroll-snap-align: center;
-    animation-play-state: running;
-  }
-  
-  @keyframes slide {
-    0% {
-        transform: translateX(-50%);
-      }
-    50% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    
-  }
-  @media screen and (min-width: 2048px) {
-    .aboutme-cards {
-      animation-duration: 60s;
-    }
-  }
-  .aboutme-card:hover {
-    transform: scale(1.05);
-    animation-play-state: paused;
-  }
-  
-  .aboutme-cards-container:hover .aboutme-cards {
-    animation-play-state: paused;
-  }
-.aboutme-title{
-    margin: 0;
-    color: white;
-    font-weight: 200;
-    font-size: 25px;
+.aboutme-card {
+  height: 30em;
+  width: 21em;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  margin: 1em;
 }
+
+.aboutme-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.aboutme-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1em;
+}
+
+
+.aboutme-card:hover {
+  transform: scale(1.05);
+  animation-play-state: paused;
+}
+
+.aboutme-cards-container:hover .aboutme-cards {
+  animation-play-state: paused;
+}
+
+.aboutme-title {
+  margin: 0;
+  color: white;
+  font-weight: 200;
+  font-size: 25px;
+}
+
 .aboutme-description {
-    color: white;
-    font-weight: 200;
-    padding: 0 1em 0 1em;
+  color: white;
+  font-weight: 200;
+  padding: 0 1em 0 1em;
 }
 
 /*bluelock gif style */
 .aboutme-card:hover .bluelock-gif {
-    filter: sepia(70%) saturate(150%) brightness(80%);
-    cursor: pointer;
+  filter: sepia(70%) saturate(150%) brightness(80%);
+  cursor: pointer;
 }
-.bluelock-gif{
-    position: relative;
-    height: 11em;
-    width: 20em;
-    border-radius: 3em;
-    margin: .8em auto 1em auto;
+
+.bluelock-gif {
+  position: relative;
+  height: 11em;
+  width: 20em;
+  border-radius: 3em;
+  margin: .8em auto 1em auto;
 }
 
 /*coding gif style */
-.coding-gif{
-    position: relative;
-    height: 11em;
-    width: 20em;
-    border-radius: 3em;
-    margin: 2em auto 1em auto;
-}
-.aboutme-card:hover .coding-gif{
-    filter: sepia(70%) saturate(150%) brightness(80%);
-    cursor: pointer;
-}
-.github{
-    margin-top: 0;
-    margin-bottom: 2em;
-    color: white;
+.coding-gif {
+  position: relative;
+  height: 11em;
+  width: 20em;
+  border-radius: 3em;
+  margin: 2em auto 1em auto;
 }
 
-/*gaming gif style */
-.gaming-gif{
-    position: relative;
-    height: 11em;
-    width: 20em;
-    border-radius: 3em;
-    margin: 0 auto 1em auto;
+.aboutme-card:hover .coding-gif {
+  filter: sepia(70%) saturate(150%) brightness(80%);
+  cursor: pointer;
 }
-.aboutme-card:hover .gaming-gif{
-    filter: sepia(70%) saturate(150%) brightness(80%);
+
+.github {
+  margin-top: 0;
+  margin-bottom: 2em;
+  color: white;
 }
 
 /* anime gif style */
-.anime-gif{
-    position: relative;
-    height: 11em;
-    width: 20em;
-    border-radius: 3em;
-    margin: 0 auto 1em auto;
-}
-.aboutme-card:hover .anime-gif{
-    filter: sepia(70%) saturate(150%) brightness(80%);
-}
-
-/*tutor gif style */
-.tutor-gif{
-    position: relative;
-    height: 11em;
-    width: 20em;
-    border-radius: 3em;
-    margin: 1.6em auto 1em auto;
-}
-.aboutme-card:hover .tutor-gif{
-    filter: sepia(70%) saturate(150%) brightness(80%);
-}
-.aboutme-description-tutor{
-    color: white;
-    font-weight: 200;
-    padding: 0 1em 0 1em;
-    margin-bottom: 0;
-}
-.tutor{
-    color: white;
-    font-weight: 200;
-    margin-top: .4em;
-}
-/*music style */
-.music-gif{
+.anime-gif {
   position: relative;
   height: 11em;
   width: 20em;
   border-radius: 3em;
   margin: 0 auto 1em auto;
 }
-.aboutme-card:hover .music-gif{
+
+.aboutme-card:hover .anime-gif {
   filter: sepia(70%) saturate(150%) brightness(80%);
 }
 
-/*flexed */
-.aboutme-cards-container-flex{
+/*tutor gif style */
+.tutor-gif {
+  position: relative;
+  height: 11em;
+  width: 20em;
+  border-radius: 3em;
+  margin: 1.6em auto 1em auto;
+}
+
+.aboutme-card:hover .tutor-gif {
+  filter: sepia(70%) saturate(150%) brightness(80%);
+}
+
+.aboutme-description-tutor {
+  color: white;
+  font-weight: 200;
+  padding: 0 1em 0 1em;
+  margin-bottom: 0;
+}
+
+.tutor {
+  color: white;
+  font-weight: 200;
+  margin-top: .4em;
+}
+
+/*work exp style */
+.list-jobs {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   flex-direction: row;
-}
-.aboutme-cards-flex{
-  display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  margin: 1em 2em;
 }
 
-/*button for layouts */
-.button {
-  display: inline-flex;
-  align-items: center;
-  column-gap: .5rem;
-  background-color: #ba8686;
-  color: white;
-  padding: 1.15rem 1.5rem;
-  border-radius: 0;
-  transition: .3s;
-  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.25);
-  border: none;
-  cursor: pointer;
-  font-size: 1.2rem;
-  margin-bottom: 3em;
-}
-
-.button-wrapper {
+.job-container {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-}
-.button-wrapper button[data-selected=true] {
-  background-color: #663333;
-  color: white;
-}
-.left-button {
-  border-top-left-radius: 0.5rem;
-  border-bottom-left-radius: 0.5rem;
+  margin-bottom: 5em;
 }
 
-.right-button {
-  border-top-right-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
+.job-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1em;
+  color: #ffffff;
+  border-radius: 1em;
+  transition: background-color 0.3s ease;
 }
 
-.left-button:hover {
-  background-color: #663333;
-  color: white;
+.job-info:hover {
+  background-color: #29452f;
 }
 
-.right-button:hover {
-  background-color: #663333;
-  color: white;
+.job-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #ffffff;
 }
 
-/*dark mode styles */
-
-.dark-mode .button{
-  background-color: #d18d57;
-}
-.dark-mode .button-wrapper button[data-selected=true] {
-  background-color: #9d5113;
-  color: white;
-}
-.dark-mode .aboutme-card{
-  background-color: #d18d57;
+.job-description {
+  font-size: 1em;
+  margin-top: 0;
+  width: 30em;
 }
 
-.dark-mode #aboutme{
-  color: #FF8B13;
+/* skills styles */
+.about-skills {
+  margin-top: 5em;
+  margin-bottom: 5em;
 }
-@media (max-width: 428px){
-  #aboutme{
-    font-size: 24px;
+
+.list-of-skills {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.list-icons {
+  color: #bcbcbc;
+  height: 2.3em;
+  width: 2.3em;
+  padding-right: .5em;
+}
+
+.list-item {
+  color: #bcbcbc;
+  font-size: 2em;
+}
+
+.list-icons:hover {
+  color: #29452f;
+}
+
+/*moblie style */
+@media (max-width: 428px) {
+  #aboutme {
+    font-size: 1.7em;
   }
-  .aboutme-cards-container{
-    height: 55em;
+
+  .about-title {
+    font-size: 1.4em;
+    margin-bottom: 1em;
   }
-  .aboutme-cards {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    animation: none;
+
+  .job-title {
+    font-size: 1.2em;
   }
-  .aboutme-card{
-    height: 18em;
-    width: 12em;
-    margin: 0 auto;
-    margin-left: .4em;
-    margin-right: .4em;
-    margin-bottom: .4em;
-    transform: none;
+
+  .job-description {
+    font-size: .8em;
   }
-  .aboutme-title{
+
+  .aboutme-cards-container {
+    flex-direction: column;
+  }
+
+  .aboutme-card {
+    height: 21em;
+    width: 9em;
+    margin: 1em 1.45em 1em 1.45em;
+  }
+
+  .aboutme-title {
     font-size: 1em;
     margin-bottom: .1em;
   }
-  .coding-gif{
+
+  .aboutme-description {
+    font-size: .8em;
+    text-align: center;
+    width: 13em;
+  }
+
+  .github {
+    font-size: .8em;
+  }
+
+  .coding-gif {
     height: 5em;
     width: 11em;
     margin: 0 auto;
     padding-top: .3em;
     padding-bottom: .3em;
+    border-radius: 2em;
   }
-  .github{
-    font-size: .7em;
-    margin-top: .2em;
-  }
-  .aboutme-description{
-    font-size: .7em;
-    margin: .1em;
-  }
-  .tutor-gif{
+
+  .tutor-gif {
     height: 5em;
     width: 11em;
     margin: 0 auto;
+    margin-top: 1.7em;
     padding-bottom: .8em;
-    border-radius: 3em;
-  }
-  .tutor{
-    font-size: .7em;
-    margin: 0;
-  }
-  .bluelock-gif{
-    height: 5em;
-    width: 11em;
-    margin: 0 auto;
-    margin-bottom: .3em;
-  }
-  .gaming-gif{
-    height: 5em;
-    width: 11em;
-    margin: 0 auto;
+    border-radius: 2em;
   }
 
-  .anime-gif{
+  .bluelock-gif {
     height: 5em;
     width: 11em;
     margin: 0 auto;
+    margin-top: 5em;
+    padding-bottom: .8em;
+    border-radius: 2em;
   }
 
-  .aboutme-card:hover {
-    transform: none;
+  .anime-gif {
+    height: 5em;
+    width: 11em;
+    margin: 0 auto;
+    margin-top: 5.5em;
+    padding-bottom: .8em;
+    border-radius: 2em;
   }
-  .aboutme-card:hover .bluelock-gif,
-  .aboutme-card:hover .coding-gif,
-  .aboutme-card:hover .gaming-gif,
-  .aboutme-card:hover .anime-gif,
-  .aboutme-card:hover .tutor-gif {
-    filter: none;
-    cursor: default;
+
+  .list-icons {
+    font-size: .8em;
   }
-  
-  .aboutme-cards-container:hover .aboutme-cards {
-    animation-play-state: paused;
-  }
-  .aboutme-description-anime{
-    color: white;
-    font-weight: 200;
-    padding: 0 1em 0 1em;
-    font-size: .7em;
-    margin-bottom: 3em;
-  }
-  .aboutme-description-gaming{
-    color: white;
-    font-weight: 200;
-    padding: 0 1em 0 1em;
-    font-size: .7em;
-    margin-bottom: 2em;
-  }
-  .aboutme-description-music{
-    color: white;
-    font-weight: 200;
-    padding: 0 1em 0 1em;
-    font-size: .7em;
-    margin-bottom: 4.2em;
+
+  .list-item {
+    font-size: 1.2em;
   }
 }
