@@ -2,6 +2,7 @@
 .navbar-container {
   display: flex;
   align-items: flex-start;
+  flex-direction: row;
   height: 200px;
   position: fluid;
 }
@@ -62,15 +63,12 @@
   color: #29452f;
 }
 
-/*hello message */
-
 /*Iam message style */
 .Iam {
   font: 40px/50px Urbanist, sans-serif;
   font-weight: bold;
   color: #bcbcbc;
   display: flex;
-  justify-content: center;
   align-items: center;
   margin-left: .5em;
 }
