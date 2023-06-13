@@ -30,7 +30,7 @@
 }
 
 .special-words {
-  color: #558e61;
+  color: #9bccf7;
   font-weight: bolder;
 }
 
@@ -42,8 +42,8 @@
 
 .email-button {
   display: inline-block;
-  border: 2px solid #3b6444;
-  color: #bcbcbc;
+  border: 2px solid #9bccf7;
+  color: #ffffff;
   text-decoration: none;
   background-color: transparent;
   padding: 10px 20px;
@@ -52,8 +52,8 @@
 }
 
 .email-button:hover {
-  background-color: #569363;
-  color: #fff;
+  background-color: #9bccf7;
+  color: #000000;
 }
 
 

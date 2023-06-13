@@ -173,7 +173,7 @@
 }
 
 .job-info:hover {
-  background-color: #29452f;
+  background-color: #3976ab;
 }
 
 .job-title {
@@ -205,19 +205,19 @@ ul {
 }
 
 .list-icons {
-  color: #bcbcbc;
+  color: #ffffff;
   height: 2.3em;
   width: 2.3em;
   padding-right: .5em;
 }
 
 .list-item {
-  color: #bcbcbc;
+  color: #ffffff;
   font-size: 2em;
 }
 
 .list-icons:hover {
-  color: #29452f;
+  color: #9bccf7;
 }
 
 /*moblie style */

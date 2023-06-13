@@ -19,7 +19,7 @@
 .nav-item {
   padding: 0 1em;
   font-size: 2em;
-  color: #bcbcbc;
+  color: #ffffff;
   margin: .1em 1em;
   margin-top: 1.5em;
 }
@@ -30,7 +30,7 @@
 }
 
 .nav-item:hover {
-  color: #29452f;
+  color: #9bccf7;
 }
 
 .nav-tabs a::after {
@@ -41,7 +41,7 @@
   left: 0;
   right: 0;
   height: 3px;
-  background-color: #29452f;
+  background-color: #B0DAFF;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
@@ -53,21 +53,21 @@
 }
 
 .icons {
-  color: #bcbcbc;
+  color: #fefefe;
   height: 2em;
   width: 2em;
   padding: 0 1em;
 }
 
 .icons:hover {
-  color: #29452f;
+  color: #9bccf7;
 }
 
 /*Iam message style */
 .Iam {
   font: 40px/50px Urbanist, sans-serif;
   font-weight: bold;
-  color: #bcbcbc;
+  color: #ffffff;
   display: flex;
   align-items: center;
   margin-left: .5em;
@@ -87,7 +87,7 @@
 }
 .Iam .innerIam {
   display: inline-block;
-  color: #29452f;
+  color: #b0daff;
   position: relative;
   white-space: nowrap;
   top: 0;
