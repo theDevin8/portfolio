@@ -1,16 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@300&display=swap');
 
 body{
-  background-color: hsla(206, 43%, 38%, 1);
-    background-image:
-      radial-gradient(at 71% 0%, hsla(187, 100%, 3%, 1) 0px, transparent 50%),
-      radial-gradient(at 43% 0%, hsla(201, 58%, 27%, 1) 0px, transparent 50%),
-      radial-gradient(at 93% 7%, hsla(47, 0%, 0%, 1) 0px, transparent 50%),
-      radial-gradient(at 56% 51%, hsla(212, 100%, 55%, 1) 0px, transparent 50%),
-      radial-gradient(at 55% 93%, hsla(193, 35%, 43%, 1) 0px, transparent 50%),
-      radial-gradient(at 48% 96%, hsla(9, 0%, 0%, 1) 0px, transparent 50%),
-      radial-gradient(at 63% 96%, hsla(91, 0%, 0%, 1) 0px, transparent 50%),
-      radial-gradient(at 12% 7%, hsla(201, 0%, 0%, 1) 0px, transparent 50%);
+  background-color: #0B2447;
   height: 100%;
   margin: 0;
   background-repeat: no-repeat;
