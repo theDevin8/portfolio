@@ -88,8 +88,8 @@ const Webpage = () => {
                     <div className="overall-me">
                         <p className="description">
                             Hi there! My name is <span className="special-words">Devin Stockton</span>, and I'm a rising junior <span className="special-words" >@ University of Houston </span>
-                            majoring in computer science and minoring in mathamatics. When I'm not studying, you can usually find me with my nose buried in a book, kicking around a soccer ball with friends, or tinkering away on a new coding project.
-                            As a computer science major, I'm always looking for ways to push myself and learn new things, whether it's through coursework or personal projects.
+                            majoring in Computer Science and minoring in Chemical Engineering. When I'm not studying, you can usually find me with my nose buried in a book, kicking around a soccer ball with friends, or tinkering away on a new coding project.
+                            As a Computer Science major, I'm always looking for ways to push myself and learn new things, whether it's through coursework or personal projects.
                         </p>
 
                         <p className="description">

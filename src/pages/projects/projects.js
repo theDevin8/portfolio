@@ -84,11 +84,11 @@ const Projects = () => {
                             </div>
 
                             <div className="right-project-card">
-                                <h3 className="project-name">{'O(n)Track (coming soon)'}</h3>
+                                <h3 className="project-name">ConnectCS</h3>
                                 <p className="project-description">
-                                    {'O(n)Track'} will be an application inspired by the book Atomic Habits by James Clear, designed to help you achieve your goals by keeping track of your daily habits.
-                                    With its user-friendly interface, customizable reminders, and visual progress tracking, it's an effective tool for building and maintaining better habits.
-                                    Whether you're looking to improve your health, productivity, or personal relationships, Habitify can help you stay on track and make progress towards your goals.
+                                    ConnectCS will be a vibrant online platform designed specifically for students majoring in computer science to connect, collaborate, and create together. 
+                                    Our goal and mission is to bring computer science students from the same or different universities onto a single platform, providing them with the opportunity 
+                                    to share their projects, exchange knowledge, and work collaboratively on exciting ventures.
                                 </p>
                             </div>
                         </div>
@@ -176,9 +176,11 @@ const Projects = () => {
                             </div>
 
                             <div className="right-project-card">
-                                <h3 className="project-name">{'O(n)Track (coming soon)'}</h3>
+                                <h3 className="project-name">ConnectCS</h3>
                                 <p className="project-description">
-                                    {'O(n)Track will be an application inspired by the book Atomic Habits by James Clear, that helps you keep track of your daily habits and achieve your goals, with customizable reminders and visual progress tracking.'}
+                                    ConnectCS will be a vibrant online platform designed specifically for students majoring in computer 
+                                    science to connect, collaborate, and create together. 
+                            
                                 </p>
                             </div>
                         </div>
