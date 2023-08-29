@@ -85,6 +85,7 @@ const Projects = () => {
 
                             <div className="right-project-card">
                                 <h3 className="project-name">{'ConnectCS (coming soon)'}</h3>
+                                <h3 className="project-name">ConnectCS</h3>
                                 <p className="project-description">
                                     ConnectCS will be a vibrant online platform designed specifically for students majoring in computer science to connect, collaborate, and create together. 
                                     Our goal and mission is to bring computer science students from the same or different universities onto a single platform, providing them with the opportunity 
